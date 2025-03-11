@@ -4,8 +4,8 @@ on: [workflow_dispatch]
 
 env:
   TEAM_ID: A229BD6J32
-  PROVISIONING_PROFILE: three60-app
-  IPA_FILE: three60-app.ipa
+  PROVISIONING_PROFILE: three60
+  IPA_FILE: three60.ipa
 
 jobs:
   build-ios:
