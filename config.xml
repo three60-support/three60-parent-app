@@ -12,6 +12,23 @@
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
     <platform name="ios">
-        <icon src="www/infrastructure/img/three60_logo.png"/>
+        <icon height="180" src="www/infrastructure/img/three60_logo.png" width="180" />
+        <icon height="60" src="www/infrastructure/img/three60_logo.png" width="60" />
+        <icon height="120" src="www/infrastructure/img/three60_logo.png" width="120" />
+        <icon height="76" src="www/infrastructure/img/three60_logo.png" width="76" />
+        <icon height="152" src="www/infrastructure/img/three60_logo.png" width="152" />
+        <icon height="40" src="www/infrastructure/img/three60_logo.png" width="40" />
+        <icon height="80" src="www/infrastructure/img/three60_logo.png" width="80" />
+        <icon height="57" src="www/infrastructure/img/three60_logo.png" width="57" />
+        <icon height="114" src="www/infrastructure/img/three60_logo.png" width="114" />
+        <icon height="72" src="www/infrastructure/img/three60_logo.png" width="72" />
+        <icon height="144" src="www/infrastructure/img/three60_logo.png" width="144" />
+        <icon height="29" src="www/infrastructure/img/three60_logo.png" width="29" />
+        <icon height="58" src="www/infrastructure/img/three60_logo.png" width="58" />
+        <icon height="87" src="www/infrastructure/img/three60_logo.png" width="87" />
+        <icon height="50" src="www/infrastructure/img/three60_logo.png" width="50" />
+        <icon height="100" src="www/infrastructure/img/three60_logo.png" width="100" />
+        <icon height="167" src="www/infrastructure/img/three60_logo.png" width="167" />
+        <icon height="1024" src="www/infrastructure/img/three60_logo.png" width="1024" />
     </platform>
 </widget>
