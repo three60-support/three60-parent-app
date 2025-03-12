@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="in.three60.app.erp" version="1.0.0" ios-CFBundleVersion="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>three60</name>
-    <description>three60 App</description>
+    <description>three60 ERP App</description>
     <author email="support@three60.in" href="http://school-erp.three60.in">
         three60 Team
     </author>
@@ -14,6 +14,7 @@
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
     <platform name="ios">
+        <preference name="allowNavigation" value="*"/>
         <icon height="180" src="www/infrastructure/img/three60_logo.png" width="180" />
         <icon height="60" src="www/infrastructure/img/three60_logo.png" width="60" />
         <icon height="120" src="www/infrastructure/img/three60_logo.png" width="120" />
