@@ -12,6 +12,7 @@
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
     <platform name="ios">
+        <preference name="deployment-target" value="11.0" />
         <preference name="allowNavigation" value="*"/>
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
