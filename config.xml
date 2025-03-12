@@ -2,11 +2,10 @@
 <widget id="in.three60.app.erp" version="1.0.0" ios-CFBundleVersion="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>three60</name>
     <description>three60 ERP App</description>
-    <author email="support@three60.in" href="http://school-erp.three60.in">
+    <author email="support@three60.in" href="http://erp.three60.in">
         three60 Team
     </author>
     <content src="login_form_app.html" />
-    <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <access origin="*" />
     <allow-navigation href="*" />
