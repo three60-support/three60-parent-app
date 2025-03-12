@@ -8,6 +8,8 @@
     <content src="login_form_app.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <access origin="*" />
+    <allow-navigation href="*" />
     <platform name="android">
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
