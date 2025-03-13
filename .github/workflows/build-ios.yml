@@ -67,6 +67,9 @@ jobs:
       - name: Add cordova-plugin-inappbrowser
         run: cordova plugin add cordova-plugin-inappbrowser
 
+      - name: Add cordova-plugin-whitelist
+        run: cordova plugin add cordova-plugin-whitelist
+
       - name: Build iOS
         run: cordova build ios --release
 
