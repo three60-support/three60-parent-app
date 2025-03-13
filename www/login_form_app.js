@@ -1,10 +1,16 @@
 document.addEventListener ("DOMContentLoaded", function ()	{
+	alert													("on DOMContentLoaded");
+	error_message.style.display								=  "inline";
+	setTimeout												(function ()			{
+		error_message.style.display							=  "none";
+	}, 3700);
 	login_button.addEventListener							("click", function (event)	{
-		alert												("On button click " + navigator.connection.type);
 		event.preventDefault								();
+		alert												("On submit " + navigator.connection.type);
 		localStorage.setItem								(STORAGE_KEY_SERVER_URL, "https://intranet.gdgoenkadwarka.com");
 		$.post												("https://intranet.gdgoenkadwarka.com" + "/servlets/three60.Infrastructure.Login.doLogin", $("#login_form").serialize(),
 			function (login_response_object)				{
+				alert										("Login Success");
 				if  (login_response_object.login_status  !=  "success")				{
 					password.value							=  "";
 					error_message.style.display				=  "inline";
