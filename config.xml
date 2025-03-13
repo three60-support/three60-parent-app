@@ -13,6 +13,12 @@
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
     <platform name="ios">
+        <edit-config file="*-Info.plist" mode="merge" target="NSAppTransportSecurity">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+            </dict>
+        </edit-config>
         <preference name="allowNavigation" value="*"/>
         <icon height="180" src="www/infrastructure/img/three60_logo.png" width="180" />
         <icon height="60" src="www/infrastructure/img/three60_logo.png" width="60" />
