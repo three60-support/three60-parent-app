@@ -1,13 +1,13 @@
 document.addEventListener ("DOMContentLoaded", function ()	{
 	alert													("on DOMContentLoaded");
-	var  error_message										=  document.getElementById ("error_message");
-	var  login_button										=  document.getElementById ("login_button");
 	error_message.style.display								=  "inline";
 	setTimeout												(function ()			{
 		error_message.style.display							=  "none";
 	}, 3700);
+	alert													("Before setting listener");
 	login_button.addEventListener							("click", function (event)	{
 		event.preventDefault								();
+		alert												("On button click.");
 		alert												("On submit " + navigator.connection.type);
 		localStorage.setItem								(STORAGE_KEY_SERVER_URL, "https://intranet.gdgoenkadwarka.com");
 		$.post												("https://intranet.gdgoenkadwarka.com" + "/servlets/three60.Infrastructure.Login.doLogin", $("#login_form").serialize(),
@@ -29,4 +29,5 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 			alert											("Error " + response.responseText);
 		});
 	});
+	alert													("After setting listener");
 });
