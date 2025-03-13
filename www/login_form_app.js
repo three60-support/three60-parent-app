@@ -1,5 +1,7 @@
 document.addEventListener ("DOMContentLoaded", function ()	{
 	alert													("on DOMContentLoaded");
+	var  error_message										=  document.getElementById ("error_message");
+	var  login_button										=  document.getElementById ("login_button");
 	error_message.style.display								=  "inline";
 	setTimeout												(function ()			{
 		error_message.style.display							=  "none";
