@@ -7,7 +7,7 @@
     </author>
     <content src="login_form_app.html" />
     <allow-intent href="https://*/*" />
-    <access origin="*" />
+    <access origin="*" allows-arbitrary-loads-in-media='true' allows-arbitrary-loads-in-web-content='true' allows-local-networking='true'/>
     <allow-navigation href="*" />
     <platform name="android">
         <icon src="www/infrastructure/img/three60_logo.png"/>
