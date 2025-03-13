@@ -8,8 +8,8 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 	login_button.addEventListener							("click", function (event)	{
 		event.preventDefault								();
 		alert												("On button click.");
-		alert												("On submit " + navigator.connection.type);
 		localStorage.setItem								(STORAGE_KEY_SERVER_URL, "https://intranet.gdgoenkadwarka.com");
+		alert												("About to post");
 		$.post												("https://intranet.gdgoenkadwarka.com" + "/servlets/three60.Infrastructure.Login.doLogin", $("#login_form").serialize(),
 			function (login_response_object)				{
 				alert										("Login Success");
@@ -28,6 +28,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 		.fail (function (response)							{
 			alert											("Error " + response.responseText);
 		});
+		alert												("Posted");
 	});
 	alert													("After setting listener");
 });
