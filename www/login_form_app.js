@@ -1,5 +1,6 @@
 document.addEventListener ("DOMContentLoaded", function ()	{
 	login_button.addEventListener							("click", function (event)	{
+		alert												("On button click " + navigator.connection.type);
 		event.preventDefault								();
 		localStorage.setItem								(STORAGE_KEY_SERVER_URL, "https://intranet.gdgoenkadwarka.com");
 		$.post												("https://intranet.gdgoenkadwarka.com" + "/servlets/three60.Infrastructure.Login.doLogin", $("#login_form").serialize(),
@@ -15,6 +16,9 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 				localStorage.setItem						(STORAGE_KEY_LOGIN_TOKEN, login_response_object.login_token);
 				window.location.href						=  login_response_object.redirect_url;
 			},  "json"
-		);
+		)
+		.fail (function (response)							{
+			alert											("Error " + response.responseText);
+		});
 	});
 });
