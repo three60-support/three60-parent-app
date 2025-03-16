@@ -35,7 +35,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 				catch  (err)								{
 					alert									("Inside catch2 : " + err.message);
 				}
-				alert										("Redirect URL " + login_response_object.redirect_url);
+				alert										("Redirect URL " + window.location.href);
 				window.location.href						=  login_response_object.redirect_url;
 			},  "json"
 		);
