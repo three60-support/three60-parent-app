@@ -10,7 +10,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 		alert												("On button click.");
 		//localStorage.setItem								(STORAGE_KEY_SERVER_URL, "https://intranet.gdgoenkadwarka.com");
 		alert												("About to post");
-		$.post												("https://intranet.gdgoenkadwarka.com" + "/servlets/three60.Infrastructure.Login.doLogin", $("#login_form").serialize(),
+		htmlPost											("https://intranet.gdgoenkadwarka.com" + "/servlets/three60.Infrastructure.Login.doLogin", $("#login_form").serialize(),
 			function (login_response_object)				{
 				alert										("Login Success");
 				if  (login_response_object.login_status  !=  "success")				{
@@ -23,11 +23,11 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 				}
 				window.localStorage.setItem					(STORAGE_KEY_LOGIN_TOKEN, login_response_object.login_token);
 				window.location.href						=  login_response_object.redirect_url;
-			},  "json"
-		)
-		.fail (function (response)							{
+			},  HTML_POST_JSON_DATATYPE
+		);
+		/*.fail (function (response)							{
 			alert											("Error " + response.responseText);
-		});
+		});*/
 		alert												("Posted");
 	});
 	alert													("After setting listener");
