@@ -13,7 +13,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 		try													{
 		$.post												("https://intranet.gdgoenkadwarka.com" + "/servlets/three60.Infrastructure.Login.doLogin", $("#login_form").serialize(),
 			function (login_response_object)				{
-				alert										("Login Success");
+				alert										("Login Success " + login_response_object.login_status);
 				if  (login_response_object.login_status  !=  "success")				{
 					password.value							=  "";
 					error_message.style.display				=  "inline";
@@ -22,7 +22,8 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 					}, 3700);
 					return;
 				}
-				alert										("About to access localStorage " + STORAGE_KEY_LOGIN_TOKEN);
+				alert										("About to access localStorage");
+				alert										("Login Token Key " + STORAGE_KEY_LOGIN_TOKEN);
 				if  (window.localStorage)					{
 					window.localStorage.setItem					(STORAGE_KEY_LOGIN_TOKEN, login_response_object.login_token);
 				}
