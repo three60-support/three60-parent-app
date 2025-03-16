@@ -13,6 +13,9 @@
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
     <platform name="ios">
+        <plugin name="cordova-plugin-wkwebview-file-xhr" spec="~2.1.4" />
+        <preference name="AllowUntrustedCerts" value="on" />
+        <preference name="InterceptRemoteRequests" value="all" />
         <edit-config file="*-Info.plist" mode="merge" target="NSAppTransportSecurity">
             <dict>
                 <key>NSAllowsArbitraryLoads</key>
