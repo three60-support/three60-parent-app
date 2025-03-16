@@ -71,6 +71,9 @@ jobs:
         run: cordova plugin add cordova-plugin-whitelist
 
       - name: Add cordova-plugin-wkwebview-file-xhr
+        run: cordova plugin add cordova-plugin-wkwebview-engine
+        
+      - name: Add cordova-plugin-wkwebview-file-xhr
         run: cordova plugin add cordova-plugin-wkwebview-file-xhr
 
       - name: Build iOS
