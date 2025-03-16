@@ -33,7 +33,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 				}
 				}
 				catch  (err)								{
-					alert									("Inside catch2 : " err.message);
+					alert									("Inside catch2 : " + err.message);
 				}
 				window.location.href						=  login_response_object.redirect_url;
 			},  "json"
