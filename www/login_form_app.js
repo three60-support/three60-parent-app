@@ -23,12 +23,17 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 					return;
 				}
 				alert										("About to access localStorage");
+				try											{
 				alert										("Login Token Key " + STORAGE_KEY_LOGIN_TOKEN);
 				if  (window.localStorage)					{
 					window.localStorage.setItem					(STORAGE_KEY_LOGIN_TOKEN, login_response_object.login_token);
 				}
 				else										{
 					alert									("localStorage is not there");
+				}
+				}
+				catch  (err)								{
+					alert									("Inside catch2 : " err.message);
 				}
 				window.location.href						=  login_response_object.redirect_url;
 			},  "json"
