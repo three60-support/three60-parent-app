@@ -21,7 +21,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 
 	/*change_password.addEventListener ("click", function ()	{
 	});*/
-	$("#main_frame").load									("/collation/student_dashboard_app.html");
+	$("#main_frame").load									("../collation/student_dashboard_app.html");
 
 
 	function  _showMainMenu (main_menu_arrays)				{
