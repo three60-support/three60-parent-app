@@ -24,7 +24,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 	/*change_password.addEventListener ("click", function ()	{
 	});*/
 	alert													("Current url = " + window.location.href);
-	$("#main_frame").load									("../collation/student_dashboard_app.html", function (response, status, xhr) {
+	$("#main_frame").load									(serverUrl + "/three60/app/erp/collation/student_dashboard_app.html", function (response, status, xhr) {
 		alert												("load output. status = " + status + " xhr.status = " + xhr.status + " xhr.statusText = " + xhr.statusText);
 	});
 	$("#main_frame").load									("./student_dashboard_app.html", function (response, status, xhr) {
