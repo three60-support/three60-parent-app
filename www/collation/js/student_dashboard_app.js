@@ -1,14 +1,15 @@
-{
+function showDashboardFragment ()							{
 	alert													("Inside student_dashboard_app.js");
 	try														{
 	const  serverUrl										=  localStorage.getItem (STORAGE_KEY_SERVER_URL);
 	const  loginToken										=  localStorage.getItem (STORAGE_KEY_LOGIN_TOKEN);
+	const  sibling_reg_id									=  document.querySelector ("#main_frame #sibling_reg_id");
 	$.get													(serverUrl + "/servlets/three60.Collation.Dashboard.GetDashboardObject", "login_token=" + loginToken + "&frontend_type=app",
 		function  (dashboard_object)						{
 			if  (!rightsIsAuthorised (dashboard_object, FRONTEND_TYPE_APP))		{
 				return;
 			}
-			card_container.innerHTML						=  Mustache.render (blank_card.innerHTML, dashboard_object);
+			$("#main_frame #card_container").html			(Mustache.render ($("#main_frame #blank_card").html(), dashboard_object);
 			$(".clickable_card").on							("click", _onCardClick);
 		},  "json"
 	);
