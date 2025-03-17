@@ -9,7 +9,7 @@ function showDashboardFragment ()							{
 			if  (!rightsIsAuthorised (dashboard_object, FRONTEND_TYPE_APP))		{
 				return;
 			}
-			$("#main_frame #card_container").html			(Mustache.render ($("#main_frame #blank_card").html(), dashboard_object);
+			$("#main_frame #card_container").html			(Mustache.render ($("#main_frame #blank_card").html(), dashboard_object));
 			$(".clickable_card").on							("click", _onCardClick);
 		},  "json"
 	);
