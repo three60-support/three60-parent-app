@@ -1,4 +1,6 @@
 document.addEventListener ("DOMContentLoaded", function ()	{
+	alert													("Inside student_homepage_app.js");
+	try														{
 	const  serverUrl										=  localStorage.getItem (STORAGE_KEY_SERVER_URL);
 	const  loginToken										=  localStorage.getItem (STORAGE_KEY_LOGIN_TOKEN);
 	htmlPost												(serverUrl + "/servlets/three60.Administration.StudentProfile.GetStudentArray",
@@ -48,6 +50,10 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 		if  (window.matchMedia ("(pointer: coarse)").matches)	{
 			menu_toggle.click								();
 		}
+	}
+	}
+	catch  (err)											{
+		alert												("Caught error in student_homepage_app.js " + err.message);
 	}
 });
 
