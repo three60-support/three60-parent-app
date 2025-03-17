@@ -33,6 +33,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 	$("#main_frame").load									("student_dashboard_app.html", function (response, status, xhr) {
 		alert												("load output. status = " + status + " xhr.status = " + xhr.status + " xhr.statusText = " + xhr.statusText);
 	});
+	$("#main_frame").html									("<h1> Apoorv </h1>");
 
 
 	function  _showMainMenu (main_menu_arrays)				{
