@@ -8,7 +8,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 	login_button.addEventListener							("click", function (event)	{
 		event.preventDefault								();
 		alert												("On button click.");
-		//localStorage.setItem								(STORAGE_KEY_SERVER_URL, "https://intranet.gdgoenkadwarka.com");
+		localStorage.setItem								(STORAGE_KEY_SERVER_URL, "https://intranet.gdgoenkadwarka.com");
 		alert												("About to post " + $("#login_form").serialize());
 		try													{
 		$.post												("https://intranet.gdgoenkadwarka.com" + "/servlets/three60.Infrastructure.Login.doLogin", $("#login_form").serialize(),
