@@ -23,18 +23,8 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 
 	/*change_password.addEventListener ("click", function ()	{
 	});*/
-	/*alert													(serverUrl + "/three60/app/erp/collation/student_dashboard_app.html");
-	$("#main_frame").load									(serverUrl + "/three60/app/erp/collation/student_dashboard_app.html", function (response, status, xhr) {
-		alert												("load output. status = " + status + " xhr.status = " + xhr.status + " xhr.statusText = " + xhr.statusText);
-	});
-	$("#main_frame").load									("./student_dashboard_app.html", function (response, status, xhr) {
-		alert												("load output. status = " + status + " xhr.status = " + xhr.status + " xhr.statusText = " + xhr.statusText);
-	});
-	$("#main_frame").load									("student_dashboard_app.html", function (response, status, xhr) {
-		alert												("load output. status = " + status + " xhr.status = " + xhr.status + " xhr.statusText = " + xhr.statusText);
-	});*/
-	$("#main_frame").html									($("#dashboard").html());
-	alert													($("#main_frame").html());
+	$("#main_frame").html									($("#dashboard_fragment").clone());
+	showDashboardFragment									();
 
 
 	function  _showMainMenu (main_menu_arrays)				{
