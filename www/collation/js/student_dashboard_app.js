@@ -1,4 +1,6 @@
 {
+	alert													("Inside student_dashboard_app.js");
+	try														{
 	const  serverUrl										=  localStorage.getItem (STORAGE_KEY_SERVER_URL);
 	const  loginToken										=  localStorage.getItem (STORAGE_KEY_LOGIN_TOKEN);
 	$.get													(serverUrl + "/servlets/three60.Collation.Dashboard.GetDashboardObject", "login_token=" + loginToken + "&frontend_type=app",
@@ -40,4 +42,8 @@
 			},  HTML_POST_JSON_DATATYPE
 		);
 	});
+	}
+	catch  (err)											{
+		alert												("Error inside student_dashboard_app.js " + err.message);
+	}
 }
