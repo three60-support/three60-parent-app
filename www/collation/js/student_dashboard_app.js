@@ -20,7 +20,7 @@ function showDashboardFragment ()							{
 				return;
 			}
 			htmlPopulateSelect								(sibling_reg_id_const, sibling_arrays, true, "Switch to Sibling");
-			sibling_div.style.display						=  "";
+			document.querySelector							("#main_frame #sibling_div").style.display			=  "";
 		},  "json"
 	);
 
