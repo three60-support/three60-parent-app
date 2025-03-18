@@ -21,7 +21,7 @@ function showEmailFragment ()								{
 			{	title										:  "Sent on"	},
 			{	title										:  "Read on"	},
 			{	title										:  "View",
-				defaultContent								:  "<a href='#'> <img src='/infrastructure/img/view_icon.png' height='17px' class='view_email'> </a>"	}
+				defaultContent								:  "<a href='#'> <img src='../infrastructure/img/view_icon.png' height='17px' class='view_email'> </a>"	}
 		],
 		info												:  false,
 		paging												:  false,
