@@ -29,7 +29,7 @@ function showDashboardFragment ()							{
 		if  (url  ==  "")									{
 			return;
 		}
-		$("#main_frame").load								(url);
+		showFragment										(url);
 	};
 
 	sibling_reg_id_const.addEventListener ("change", function	()	{
