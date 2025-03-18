@@ -37,9 +37,11 @@ function showHomeworkFragment ()							{
 		_getHomework										();
 	});
 
-	homework_tbody_elememt.addEventListener					("click", function (event)	{
+	$("#main_frame #homework_tbody").on						("click", function (event)	{
+		alert												("Click homework tbody");
 		const  event_target									=  event.target;
 		if  (event_target)									{
+			alert											("Target class = " + event_target.className);
 			if  (event_target.className  ==  "view_homework")	{
 				_viewHomework								(event_target);
 			}
