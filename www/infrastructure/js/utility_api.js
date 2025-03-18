@@ -82,7 +82,7 @@ function  studentProfileGetStudentDP						(student_reg_id,  student_dp_file_name
 
 
 function showFragment (fragment_name)						{
-	$("#main_frame").html									($("#main_frame #" + fragment_name + "_fragment").clone());
+	$("#main_frame").html									($("#" + fragment_name + "_fragment").clone());
 	switch  (fragment_name)									{
 		case  "dashboard" :
 			showDashboardFragment							();
