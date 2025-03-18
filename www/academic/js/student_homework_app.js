@@ -23,7 +23,7 @@ function showHomeworkFragment ()							{
 			{	title										:  "Due Date"	},
 			{	visible										:  false		},
 			{	title										:  "View",
-				defaultContent								:  "<a href='#'> <img src='/infrastructure/img/view_icon.png' class='view_homework' height='17px'> </a>"	}
+				defaultContent								:  "<a href='#'> <img src='../infrastructure/img/view_icon.png' class='view_homework' height='17px'> </a>"	}
 		],
 		info												:  false,
 		paging												:  false,
