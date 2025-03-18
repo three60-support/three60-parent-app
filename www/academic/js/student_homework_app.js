@@ -1,7 +1,6 @@
 function showHomeworkFragment ()							{
 	const	homework_as_on_element							=  document.querySelector ("#main_frame #homework_as_on");
 	const	get_homework_button_element						=  document.querySelector ("#main_frame #get_homework_button");
-	const	homework_tbody_element							=  document.querySelector ("#main_frame #homework_tbody");
 	const	homework_modal_element							=  document.querySelector ("#main_frame #homework_modal");
 	const	homework_subject_div_element					=  document.querySelector ("#main_frame #homework_subject_div");
 	const	given_on_div_element							=  document.querySelector ("#main_frame #given_on_div");
@@ -38,7 +37,6 @@ function showHomeworkFragment ()							{
 	});
 
 	$("#main_frame #homework_tbody").on						("click", function (event)	{
-		alert												("Click homework tbody");
 		const  event_target									=  event.target;
 		if  (event_target)									{
 			alert											("Target class = " + event_target.className);
@@ -106,7 +104,7 @@ function showHomeworkFragment ()							{
 
 
 	function _onAttachmentClick (event_target)				{
-		window.open											(serverUrl + "/servlets/three60.Infrastructure.VisibleData.GetVisibleDataFile?module_id=" + MODULE_ID_HOMEWORK + "&dep_id=" +
-																homeworkId + "&file_name=" + event_target.textContent + "&login_token=" + loginToken, "_system");
+		cordova.InAppBrowser.open							(serverUrl + "/servlets/three60.Infrastructure.VisibleData.GetVisibleDataFile?module_id=" + MODULE_ID_HOMEWORK + "&dep_id=" +
+																homeworkId + "&file_name=" + event_target.textContent + "&login_token=" + loginToken, "_blank", "location=yes");
 	}
 }
