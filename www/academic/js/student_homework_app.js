@@ -45,9 +45,11 @@ function showHomeworkFragment ()							{
 		}
 	});
 
-	homework_modal_element.addEventListener					("click", function (event)	{
+	$("#main_frame #homework_modal").on						("click", function (event)	{
+		alert												("On Modal Click");
 		const  event_target									=  event.target;
 		if  (event_target)									{
+			alert											("Class = " + event_target.className);
 			if  (event_target.className  ==  "attachment_link")			{
 				_onAttachmentClick							(event_target);
 			}
@@ -103,7 +105,13 @@ function showHomeworkFragment ()							{
 
 
 	function _onAttachmentClick (event_target)				{
-		cordova.InAppBrowser.open							(serverUrl + "/servlets/three60.Infrastructure.VisibleData.GetVisibleDataFile?module_id=" + MODULE_ID_HOMEWORK + "&dep_id=" +
+		try													{
+		var ref = cordova.InAppBrowser.open							(serverUrl + "/servlets/three60.Infrastructure.VisibleData.GetVisibleDataFile?module_id=" + MODULE_ID_HOMEWORK + "&dep_id=" +
 																homeworkId + "&file_name=" + event_target.textContent + "&login_token=" + loginToken, "_blank", "location=yes");
+		alert												(ref);
+		}
+		catch  (err)										{
+			alert											("Error " + err.message);
+		}
 	}
 }
