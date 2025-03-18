@@ -1,5 +1,4 @@
 document.addEventListener ("DOMContentLoaded", function ()	{
-	alert													("Inside student_homepage_app.js");
 	try														{
 	const  serverUrl										=  localStorage.getItem (STORAGE_KEY_SERVER_URL);
 	const  loginToken										=  localStorage.getItem (STORAGE_KEY_LOGIN_TOKEN);
@@ -53,7 +52,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 	}
 	}
 	catch  (err)											{
-		alert												("Caught error in student_homepage_app.js " + err.message);
+		alert												("Error : " + err.message);
 	}
 });
 
