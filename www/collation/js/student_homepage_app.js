@@ -23,8 +23,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 
 	/*change_password.addEventListener ("click", function ()	{
 	});*/
-	$("#main_frame").html									($("#dashboard_fragment").clone());
-	showDashboardFragment									();
+	showFragment											("dashboard");
 
 
 	function  _showMainMenu (main_menu_arrays)				{
@@ -47,7 +46,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 	}
 
 	function  _onMainMenuClick ()							{
-		$("#main_frame").load								(this.url);
+		showFragment										(this.url);
 		if  (window.matchMedia ("(pointer: coarse)").matches)	{
 			menu_toggle.click								();
 		}
