@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: android-app-release-apk
-          path: platforms/android/app/build/outputs/apk/release/app-release.apk
+          path: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
 
       - name: Build Android App Bundle
         run: cordova build android --release -- --packagingOptions.signingConfig=null --packageType=bundle
