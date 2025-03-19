@@ -23,23 +23,6 @@
             </dict>
         </edit-config>
         <preference name="allowNavigation" value="*"/>
-        <icon height="180" src="res/three60_logo.png" width="180" />
-        <icon height="60" src="res/three60_logo.png" width="60" />
-        <icon height="120" src="res/three60_logo.png" width="120" />
-        <icon height="76" src="res/three60_logo.png" width="76" />
-        <icon height="152" src="res/three60_logo.png" width="152" />
-        <icon height="40" src="res/three60_logo.png" width="40" />
-        <icon height="80" src="res/three60_logo.png" width="80" />
-        <icon height="57" src="res/three60_logo.png" width="57" />
-        <icon height="114" src="res/three60_logo.png" width="114" />
-        <icon height="72" src="res/three60_logo.png" width="72" />
-        <icon height="144" src="res/three60_logo.png" width="144" />
-        <icon height="29" src="res/three60_logo.png" width="29" />
-        <icon height="58" src="res/three60_logo.png" width="58" />
-        <icon height="87" src="res/three60_logo.png" width="87" />
-        <icon height="50" src="res/three60_logo.png" width="50" />
-        <icon height="100" src="res/three60_logo.png" width="100" />
-        <icon height="167" src="res/three60_logo.png" width="167" />
-        <icon height="1024" src="res/three60_logo.png" width="1024" />
+        <icon height="1024" src="res/three60_logo_1024_opaque.png" width="1024" />
     </platform>
 </widget>
