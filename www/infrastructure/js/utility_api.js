@@ -81,17 +81,17 @@ function  studentProfileGetStudentDP						(student_reg_id,  student_dp_file_name
 }
 
 
-function showFragment (fragment_name)						{
+function appShowFragment (fragment_name)					{
 	$("#main_frame").html									($("#" + fragment_name + "_fragment").clone());
 	switch  (fragment_name)									{
 		case  "dashboard" :
-			showDashboardFragment							();
+			appShowDashboardFragment						();
 			break;
 		case  "homework" :
-			showHomeworkFragment							();
+			appShowHomeworkFragment							();
 			break;
 		case  "email" :
-			showEmailFragment								();
+			appShowEmailFragment							();
 			break;
 	}
 }
