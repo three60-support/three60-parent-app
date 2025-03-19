@@ -1,4 +1,4 @@
-function showDashboardFragment ()							{
+function appShowDashboardFragment ()						{
 	try														{
 	const  serverUrl										=  localStorage.getItem (STORAGE_KEY_SERVER_URL);
 	const  loginToken										=  localStorage.getItem (STORAGE_KEY_LOGIN_TOKEN);
@@ -28,7 +28,7 @@ function showDashboardFragment ()							{
 		if  (url  ==  "")									{
 			return;
 		}
-		showFragment										(url);
+		appShowFragment										(url);
 	};
 
 	sibling_reg_id_const.addEventListener ("change", function	()	{
