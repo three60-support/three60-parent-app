@@ -22,7 +22,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 
 	/*change_password.addEventListener ("click", function ()	{
 	});*/
-	showFragment											("dashboard");
+	appShowFragment											("dashboard");
 
 
 	function  _showMainMenu (main_menu_arrays)				{
@@ -45,7 +45,7 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 	}
 
 	function  _onMainMenuClick ()							{
-		showFragment										(this.url);
+		appShowFragment										(this.url);
 		if  (window.matchMedia ("(pointer: coarse)").matches)	{
 			menu_toggle.click								();
 		}
