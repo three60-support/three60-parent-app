@@ -1,4 +1,4 @@
-function showEmailFragment ()								{
+function appShowEmailFragment ()							{
 	const  serverUrl										=  localStorage.getItem (STORAGE_KEY_SERVER_URL);
 	const  loginToken										=  localStorage.getItem (STORAGE_KEY_LOGIN_TOKEN);
 
