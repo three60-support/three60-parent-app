@@ -57,5 +57,5 @@ document.addEventListener ("DOMContentLoaded", function ()	{
 });
 
 document.addEventListener ("deviceready", function ()		{
-	//window.open											=  cordova.InAppBrowser.open;
+	window.open											=  cordova.InAppBrowser.open;
 });
