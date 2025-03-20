@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="in.three60.app.erp" version="1.0.0" ios-CFBundleVersion="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>three60</name>
-    <description>three60 ERP App</description>
+<widget id="in.three60.app.parent" version="1.0.0" ios-CFBundleVersion="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>three60 Parent</name>
+    <description>three60 Parent App</description>
     <author email="support@three60.in" href="http://erp.three60.in">
         three60 Team
     </author>
@@ -23,6 +23,8 @@
             </dict>
         </edit-config>
         <preference name="allowNavigation" value="*"/>
-        <icon height="1024" src="res/three60_logo_1024_opaque.png" width="1024" />
+        <icon src="res/three60_logo_opaque_1024.png" height="1024" width="1024"/>
+        <icon src="res/three60_logo_opaque_180.png"  height="180"  width="180"/>
+        <icon src="res/three60_logo_opaque_120.png"  height="120"  width="120"/>
     </platform>
 </widget>
