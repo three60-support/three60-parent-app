@@ -11,7 +11,7 @@
     <allow-navigation href="*" />
     <platform name="android">
         <icon src="www/infrastructure/img/three60_logo.png"/>
-        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
+        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
             <activity android:label="Parent App">
             </activity>
         </edit-config>
