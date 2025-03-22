@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="in.three60.app.parent" version="1.0.0" ios-CFBundleVersion="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>three60 Parent</name>
+    <name>three60 Parent App</name>
     <description>three60 Parent App</description>
     <author email="support@three60.in" href="http://erp.three60.in">
         three60 Team
@@ -11,6 +11,10 @@
     <allow-navigation href="*" />
     <platform name="android">
         <icon src="www/infrastructure/img/three60_logo.png"/>
+        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
+            <activity android:label="Parent App">
+            </activity>
+        </edit-config>
     </platform>
     <platform name="ios">
         <plugin name="cordova-plugin-wkwebview-file-xhr" spec="~2.1.4" />
@@ -22,6 +26,9 @@
                 <true/>
             </dict>
         </edit-config>
+        <config-file target="*-Info.plist" parent="CFBundleDisplayName">
+            <string>Parent App</string>
+        </config-file>
         <preference name="allowNavigation" value="*"/>
         <icon src="res/three60_logo_opaque_1024.png" height="1024" width="1024"/>
         <icon src="res/three60_logo_opaque_180.png"  height="180"  width="180"/>
