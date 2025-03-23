@@ -50,7 +50,7 @@ jobs:
           path: platforms/android/app/build/outputs/apk/release/app-release.apk
 
       - name: Build Android App Bundle
-        run: cordova build android --release -- --packagingOptions.signingConfig=null --packageType=bundle
+        run: cordova build android --release -- --keystore=android.keystore --storePassword=${{ secrets.ANDROID_KEYSTORE_PASSWORD }} --alias=${{ secrets.ANDROID_KEYSTORE_ALIAS }} --password=${{ secrets.ANDROID_KEYSTORE_PASSWORD }} --packageType=bundle
 
       - name: Upload Android App Bundle
         uses: actions/upload-artifact@v4
