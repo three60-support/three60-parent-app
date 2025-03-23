@@ -5,6 +5,7 @@ const  HTML_POST_JSON_DATATYPE		=  "J",					HTML_POST_TEXT_DATATYPE		=  "T";
 const  STORAGE_KEY_SERVER_URL								=  "three60.Master.School.ServerUrl",			STORAGE_KEY_LOGIN_TOKEN		=  "three60.Infrastructure.Login.LoginToken";
 const  _NOT_LOGGED_IN_RESPONSE								=  "_not_logged_in";
 const  _STUDENT_DP_PATH										=  "/data/visible/vs/utility/profile/student/";
+let    appCurrentFragment									=  "";
 
 function  htmlDisableFieldRange								(class_name_prefix,  start_no,  end_no,  to_disable)	{
 	for  (var f = start_no;  f <= end_no;  f++)				{
@@ -82,6 +83,10 @@ function  studentProfileGetStudentDP						(student_reg_id,  student_dp_file_name
 
 
 function appShowFragment (fragment_name)					{
+	if  (fragment_name  ==  appCurrentFragment)				{
+		return;
+	}
+	appCurrentFragment										=  fragment_name;
 	$("#main_frame").html									($("#" + fragment_name + "_fragment").clone());
 	switch  (fragment_name)									{
 		case  "dashboard" :
