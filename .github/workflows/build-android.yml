@@ -35,7 +35,7 @@ jobs:
         run: npm install -g cordova
 
       - name: Add Cordova Android platform
-        run: cordova platform add android@12.0.0
+        run: cordova platform add android@13.0.0
 
       - name: Add cordova-plugin-inappbrowser
         run: cordova plugin add cordova-plugin-inappbrowser
