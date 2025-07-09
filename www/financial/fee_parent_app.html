@@ -1,0 +1,33 @@
+<h2 align='center'> Online Fee Payment </h2>
+<div id='online_fee_payment_div'> </div>
+<script id='online_fee_payment_template' type='x-tmpl-mustache'>
+	<form id='online_fee_payment_form' class='card p-1 bg-light'>
+		<div class='form-row'>
+			<div class='form-group col-md-4'>
+				<label for='fee_balance' class='control-label small compact'> Fee Balance (&#8377;) </label>
+				<input id='fee_balance'  class='form-control-plaintext' value='{{fee_balance}}' readonly/>
+			</div>
+			<div class='form-group col-md-4'>
+				<label for='fee_late_fine' class='control-label small compact'> Late Fine (&#8377;) </label>
+				<input id='fee_late_fine'  class='form-control-plaintext' value='{{fee_late_fine}}' readonly/>
+			</div>
+			<div class='form-group col-md-4'>
+				<label for='net_fee_payable' class='control-label small compact'> Net Payable (&#8377;) </label>
+				<input id='net_fee_payable'  class='form-control-plaintext' value='{{net_fee_payable}}' readonly/>
+			</div>
+		</div>
+		<div class='form-row'>
+			<div class='form-group col-md-4'>
+				<label for='online_fee_payment_amount' class='control-label small compact'> Amount to Pay (&#8377;) </label>
+				<input id='online_fee_payment_amount' name='online_fee_payment_amount' class='form-control' value='{{online_fee_payment_amount}}'/>
+			</div>
+			<div class='form-group col-md-8' align='center'>
+				<br class='compact_label_height'/>
+				<button id='online_fee_payment_button' class='btn btn-warning'> Pay </button>
+			</div>
+		</div>
+		<input type='hidden' name='payment_gateway_id' value='1'/>
+		<input type='hidden' name='account_id'         value='1'/>
+	</form>
+</script>
+<script src='/financial/js/fee_parent_app.js'> </script>
