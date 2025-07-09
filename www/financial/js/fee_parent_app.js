@@ -13,6 +13,7 @@ function appShowFeeFragment ()								{
 	}
 
 	$("#main_frame #online_fee_payment_button").on			("click", function (event)	{
+		event.preventDefault								();
 		const  online_fee_payment_browser					=  cordova.InAppBrowser.open (serverUrl + "/servlets/three60.Financial.Fee.OnlineFeePaymentRequest",
 																	$("#main_frame #online_fee_payment_form").serialize() + "&login_token=" + loginToken, "_blank", "location=no");
 
