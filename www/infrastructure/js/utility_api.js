@@ -95,6 +95,9 @@ function appShowFragment (fragment_name)					{
 		case  "homework" :
 			appShowHomeworkFragment							();
 			break;
+		case  "fee" :
+			appShowFeeFragment								();
+			break;
 		case  "email" :
 			appShowEmailFragment							();
 			break;
