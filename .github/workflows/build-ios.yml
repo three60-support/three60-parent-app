@@ -19,7 +19,7 @@ jobs:
         run: |
           # update ios-CFBundleVersion
           TIMESTAMP=`date '+%Y%m%d%H%M'`
-          sed -i'.bak' "s/ios-CFBundleVersion=\"1.0.0\"/ios-CFBundleVersion=\"${TIMESTAMP}\"/g" config.xml 
+          sed -i'.bak' "s/ios-CFBundleVersion=\"1.1.0\"/ios-CFBundleVersion=\"${TIMESTAMP}\"/g" config.xml 
           cat config.xml
 
       - name: Setup Node.js
@@ -62,7 +62,7 @@ jobs:
         run: npm install -g cordova
 
       - name: Add Cordova iOS platform
-        run: cordova platform add ios@6.3.0
+        run: cordova platform add ios@7.1.1
 
       - name: Add cordova-plugin-inappbrowser
         run: cordova plugin add cordova-plugin-inappbrowser
@@ -91,7 +91,7 @@ jobs:
           cordova build ios --release --device --codeSignIdentity="Apple Distribution" --developmentTeam="$TEAM_ID" --packageType="app-store" --provisioningProfile="$PROVISIONING_PROFILE" --buildFlag="PROVISIONING_PROFILE_SPECIFIER=$PROVISIONING_PROFILE" --buildFlag="CODE_SIGN_STYLE=Manual"
 
       - name: Upload IPA
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: ios-app-release
           path: platforms/ios/build/device/${{ env.IPA_FILE }}
