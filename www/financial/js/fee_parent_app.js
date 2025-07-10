@@ -11,10 +11,10 @@ function appShowFeeFragment ()								{
 				$("#main_frame #online_fee_payment_div #online_fee_payment_button").on		("click", function (event)	{
 					event.preventDefault					();
 					const  online_fee_payment_browser		=  cordova.InAppBrowser.open (serverUrl + "/servlets/three60.Financial.Fee.OnlineFeePaymentRequest?" +
-																	$("#main_frame #online_fee_payment_div #online_fee_payment_form").serialize() + "&login_token=" + loginToken, "_blank", "location=no");
+																	$("#main_frame #online_fee_payment_div #online_fee_payment_form").serialize() + "&login_token=" + loginToken, "_blank", "location=yes");
 					
 					online_fee_payment_browser.addEventListener	("exit", function ()		{
-						//_getFeePayable						();
+						_getFeePayable						();
 					});
 				});
 			},  "json"
