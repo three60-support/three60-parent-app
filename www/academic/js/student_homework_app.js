@@ -103,8 +103,7 @@ function appShowHomeworkFragment ()							{
 
 
 	function _onAttachmentClick (event_target)				{
-		//if  (cordova.platformId.toLowerCase().indexOf("android")  >  -1)	{
-		if  (false)	{
+		if  (cordova.platformId.toLowerCase().indexOf("android")  >  -1)	{
 			window.open										(serverUrl + "/servlets/three60.Infrastructure.VisibleData.GetVisibleDataFile?module_id=" + MODULE_ID_HOMEWORK + "&dep_id=" +
 																homeworkId + "&file_name=" + event_target.textContent + "&login_token=" + loginToken, "_system");
 		}
