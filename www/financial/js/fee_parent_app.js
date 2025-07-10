@@ -9,12 +9,12 @@ function appShowFeeFragment ()								{
 			function  (fee_payable_object)					{
 				$("#main_frame #online_fee_payment_div").html	(Mustache.render ($("#main_frame #online_fee_payment_template").html(), fee_payable_object.data));
 				$("#main_frame #online_fee_payment_div #online_fee_payment_button").on		("click", function (event)	{
-					event.preventDefault							();
-					const  online_fee_payment_browser				=  cordova.InAppBrowser.open (serverUrl + "/servlets/three60.Financial.Fee.OnlineFeePaymentRequest",
-																			$("#main_frame #online_fee_payment_div #online_fee_payment_form").serialize() + "&login_token=" + loginToken, "_blank", "location=no");
-			
-					online_fee_payment_browser.addEventListener		("exit", function ()		{
-						_getFeePayable								();
+					event.preventDefault					();
+					const  online_fee_payment_browser		=  cordova.InAppBrowser.open (serverUrl + "/servlets/three60.Financial.Fee.OnlineFeePaymentRequest",
+																	$("#main_frame #online_fee_payment_div #online_fee_payment_form").serialize() + "&login_token=" + loginToken, "_blank", "location=no");
+					alert									(online_fee_payment_browser);
+					online_fee_payment_browser.addEventListener	("exit", function ()		{
+						//_getFeePayable						();
 					});
 				});
 			},  "json"
