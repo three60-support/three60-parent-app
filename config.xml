@@ -1,31 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="in.three60.app.parent" version="1.1.0" ios-CFBundleVersion="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="in.three60.app.parent" version="1.1.1" ios-CFBundleVersion="1.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>three60 Parent App</name>
     <description>three60 Parent App</description>
-    <author email="support@three60.in" href="http://erp.three60.in">
+    <author email="support@three60.in" href="https://www.three60.in">
         three60 Team
     </author>
-    <content src="login_form_app.html" />
-    <allow-intent href="https://*/*" />
-    <access origin="*" allows-arbitrary-loads-in-media='true' allows-arbitrary-loads-in-web-content='true' allows-local-networking='true'/>
-    <allow-navigation href="*" />
+	<content src="login_form_app.html" />
+	<allow-intent href="https://intranet.gdgoenkadwarka.com/*" />
+	<access origin="https://intranet.gdgoenkadwarka.com" />
+	<access origin="https://code.jquery.com" />
+	<access origin="https://cdn.jsdelivr.net" />
+	<access origin="https://cdn.datatables.net" />
+	<access origin="https://cdnjs.cloudflare.com" />
+	<allow-navigation href="https://intranet.gdgoenkadwarka.com/*" />
+	<allow-navigation href="https://easypay.axisbank.co.in/index.php/api/payment" />
     <platform name="android">
+		<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+			<application android:taskAffinity="" android:usesCleartextTraffic="false" />
+		</edit-config>
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
     <platform name="ios">
         <plugin name="cordova-plugin-wkwebview-file-xhr" spec="~2.1.4" />
-        <preference name="AllowUntrustedCerts" value="on" />
         <preference name="InterceptRemoteRequests" value="all" />
-        <edit-config file="*-Info.plist" mode="merge" target="NSAppTransportSecurity">
-            <dict>
-                <key>NSAllowsArbitraryLoads</key>
-                <true/>
-            </dict>
-        </edit-config>
         <config-file target="*-Info.plist" parent="CFBundleDisplayName">
             <string>Parent App</string>
         </config-file>
-        <preference name="allowNavigation" value="*"/>
         <icon src="res/three60_logo_opaque_1024.png" height="1024" width="1024"/>
         <icon src="res/three60_logo_opaque_180.png"  height="180"  width="180"/>
         <icon src="res/three60_logo_opaque_120.png"  height="120"  width="120"/>
