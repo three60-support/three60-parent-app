@@ -15,9 +15,9 @@
 	<allow-navigation href="https://intranet.gdgoenkadwarka.com/*" />
 	<allow-navigation href="https://easypay.axisbank.co.in/index.php/api/payment" />
     <platform name="android">
-		<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+		<!--<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
 			<application android:taskAffinity="" android:usesCleartextTraffic="false" />
-		</edit-config>
+		</edit-config>-->
         <icon src="www/infrastructure/img/three60_logo.png"/>
     </platform>
     <platform name="ios">
